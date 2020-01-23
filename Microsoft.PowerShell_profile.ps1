@@ -13,11 +13,12 @@
 # 设置terminal的git和oh-my-posh
 Import-Module posh-git
 Import-Module oh-my-posh
-# 禁用原来的Ctrl +r
- Remove-PSReadlineKeyHandler 'Ctrl+r'
+Set-PSReadlineOption -EditMode Vi
+# # 禁用原来的Ctrl +r
+#  Remove-PSReadlineKeyHandler 'Ctrl+r'
 
 # PSFzf
-Import-Module PSFzf
+# Import-Module PSFzf
 
 # 设置主题
 Set-Theme tehrob
@@ -31,6 +32,5 @@ function lsa {
 }
 
 
-Set-PSReadlineOption -EditMode Vi
 # Set-PSReadlineOption -ViModeIndicator Cursor
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
